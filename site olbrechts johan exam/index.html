@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--https://steamcommunity.com/profiles/76561197979929268/-->
+     <title>Projet Olbechts johan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.CSS" />
+
+    <style>
+        .box {
+            display: flex;
+}
+        .center{
+          text-align: center;
+      }
+      nav{
+          display: flex;
+          justify-content: center;
+          font-size: 50px;
+
+
+      }
+      nav a {
+          margin: 0 20px 0 20px;
+
+
+      }
+      nav1 a {
+          display: flex;
+          justify-content: center;
+          font-size: 100px;
+          text-shadow: 5px 5px 4px #cd1e3f;
+          font-family: monospace;
+
+      }
+      footer{
+          background: transparent;
+          color: cyan;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+
+
+      }
+    container {
+        background: #733F8A;
+
+    }
+    .flex-column{
+        max-width: 260px;
+    }
+    .img-fluid{
+        margin: 50px;
+        animation: scroll 10s infinite linear;
+        border-radius: 50%;
+        width: 70%;
+        height: 70%;
+
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+
+}
+   .d-flex flex-row{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+
+    }
+    img2 {
+        height: 100px;
+    }
+    .ronde{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+        #background-video {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        backdrop-filter: brightness(10%);
+}
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,800,900);
+
+      html {
+        width: 100%;
+        height: 100%;
+        font-family: "Raleway", sans-serif;
+      }
+      .title {
+        font-weight: 800;
+        color: transparent;
+        font-size: 120px;
+        background: url("images/fond-site.jpg") repeat;
+        background-clip: text;
+        background-position: center;
+        -webkit-background-clip: text;
+        text-align: center;
+        line-height: 100px;
+        letter-spacing: 8px;
+        font-family: monospace;
+      }
+      .title1 {
+          text-shadow: 1px 1px 2px pink;
+      }
+
+      .subtitle {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 10px;
+      }
+    .image-zoom {
+        transition: transform 0.3s;
+}
+
+    .image-zoom:hover {
+        transform: scale(1.1);
+}
+    .contact_ovale{
+        height: 80px;
+        border-radius: 25px;
+        width: 400px;
+
+    }
+
+    </style>
+        <nav1>
+            <a href="service%20informatique.html">service dépanage informatique</a>
+        </nav1>
+        <nav>
+
+            <a href="index.html"><img class="ronde image-zoom" src="images/home.jpg" height="100px" alt="aceulle"> </a>
+            <a href="Cv.html"><img class="ronde image-zoom" src="images/icone-cv.jpg" height="100px" alt="Curriculum vitae"></a>
+            <a href="Présentation_perso.html"><img class="ronde image-zoom" src="images/Présentation_personelle.jpg" height="100px" alt="Présentation personelle"></a>
+        </nav>
+</head>
+<body>
+<video id="background-video" autoplay loop muted>
+
+<source type="video/mp4" src="fond_site_move.mp4">
+
+</video>
+ <body>
+    <div class="title">Projet HTML final de
+Johan Olbrechts</div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let mouseX, mouseY;
+        const ww = window.innerWidth;
+        const wh = window.innerHeight;
+        let traX, traY;
+
+        document.addEventListener("mousemove", function (e) {
+          mouseX = e.pageX;
+          mouseY = e.pageY;
+          traX = (4 * mouseX) / 570 + 40;
+          traY = (4 * mouseY) / 570 + 50;
+          console.log(traX);
+          document.querySelector(
+            ".title"
+          ).style.backgroundPosition = `${traX}% ${traY}%`;
+        });
+      });
+    </script>
+    <div class="container">
+   <div class="d-flex flex-row">
+      <div class="carousel">
+         <img src="images/1.jpg" class="img-fluid ">
+         <img src="images/2.jpg" class="img-fluid">
+          <img src="images/3.jpg" class="img-fluid">
+           <img src="images/4.jpg" class="img-fluid">
+          <img src="images/5.jpg" class="img-fluid">
+          <img src="images/6.jpg" class="img-fluid">
+     <img src="images/7.jpg" class="img-fluid">
+      </div>
+
+<footer id="footer">
+    <a href="test_contactme.html"><img class="contact_ovale" src="images/contact_ovale.jpeg" height="90px" alt="Contact"></a>
+</footer>
+</body>
+</html>

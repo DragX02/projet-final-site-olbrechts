@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" href="steles_contact.css">
+    <style>
+        .contact_inf {
+            margin-left: 300px;
+            font-family: monospace;
+            font-size: 25px;
+            color: white;
+        }
+        .contact_inf1 {
+            margin-left: 300px;
+            font-family: monospace;
+            font-size: 25px;
+            color: white;
+        }
+        .error {
+            border-color: red;
+        }
+        .error-txt {
+            display: none;
+            color: red;
+}
+
+
+        .box {
+            display: flex;
+}       .center{
+          text-align: center;
+      }
+      nav{
+          position: fixed;
+          display: flex;
+          justify-content: center;
+          font-size: 50px;
+          margin-top: -220px;
+          top: 50%;
+          left: 50%;
+          align-items: center;
+          align-content: center;
+
+      }
+      nav a {
+          justify-content: center;
+          display: flex;
+          margin: -40% 20px 0 20px;
+      }
+      nav1 a {
+          display: flex;
+          justify-content: center;
+          font-size: 100px;
+      }
+      footer{
+          background: transparent;
+          color: cyan;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+
+      }
+    container {
+        background: #733F8A;
+
+    }
+    .flex-column{
+        max-width: 260px;
+    }
+    .img-fluid{
+        margin: 50px;
+        animation: scroll 10s infinite linear;
+        border-radius: 50%;
+        width: 70%;
+        height: 70%;
+
+    }
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+
+}
+   .d-flex flex-row{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+
+    }
+    img2 {
+        height: 100px;
+    }
+    .ronde{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+        #background-video {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+}
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,800,900);
+
+      html {
+        width: 100%;
+        height: 100%;
+        font-family: "Raleway", sans-serif;
+      }
+
+      .title {
+        font-weight: 800;
+        color: transparent;
+        font-size: 120px;
+        background: url("images/fond-site.jpg") repeat;
+        background-clip: text;
+        background-position: center;
+        -webkit-background-clip: text;
+        text-align: center;
+        line-height: 100px;
+        letter-spacing: 8px;
+      }
+
+      .subtitle {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 10px;
+      }
+    .image-zoom {
+        transition: transform 0.3s;
+}
+
+    .image-zoom:hover {
+        transform: scale(1.1);
+}
+    </style>
+         <nav>
+
+            <a href="index.html"><img class="ronde image-zoom" src="images/home.jpg" height="100px" alt="aceulle"> </a>
+            <a href="Cv.html"><img class="ronde image-zoom" src="images/icone-cv.jpg" height="100px" alt="Curriculum vitae"></a>
+            <a href="Présentation_perso.html"><img class="ronde image-zoom" src="images/Présentation_personelle.jpg" height="100px" alt="Présentation personelle"></a>
+        </nav>
+
+</head>
+<body>
+<video id="background-video" autoplay loop muted>
+    <source type="video/mp4" src="fond_site_move.mp4">
+</video>
+
+
+<section class="contact">
+    <h2>Formulaire de contact</h2>
+    <form id="contactForm">
+        <div class="input-box">
+            <div class="input-field field">
+                <input type="text" placeholder="Nom complet" id="name" class="item" autocomplete="off">
+                <div class="error-txt">Nom complet est incorrect!!!</div>
+            </div>
+            <div class="input-field field">
+                <input type="text" placeholder="Adresse email" id="mail" class="item" autocomplete="off">
+                <div class="error-txt mail">Adresse email est incorrecte!!!</div>
+            </div>
+        </div>
+        <div class="input-box">
+            <div class="input-field field">
+                <input type="text" placeholder="Téléphone" id="phone" class="item" autocomplete="off">
+                <div class="error-txt">Téléphone est incorrect!!!</div>
+            </div>
+            <div class="input-field field">
+                <input type="text" placeholder="Sujet" id="subject" class="item" autocomplete="off">
+                <div class="error-txt">La demande est incorrecte!!!</div>
+            </div>
+        </div>
+        <div class="textarea-field field">
+            <textarea id="message" cols="30" rows="10" placeholder="Votre message" class="item" autocomplete="off"></textarea>
+            <div class="error-txt">Le message est incorrect!!!</div>
+        </div>
+        <button type="submit">Envoyer le message</button>
+    </form>
+</section>
+
+<section>
+    <h2 class="contact_inf">Information de contact:</h2>
+    <p class="contact_inf1">Email : dragx03@gmail.com</p>
+    <p class="contact_inf1">Téléphone : 0555.55.55.55</p>
+</section>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="scriptmail.js"></script>
+</body>
+</html>
