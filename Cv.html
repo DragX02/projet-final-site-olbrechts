@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CV</title>
+<meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+    *{
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    a{
+      text-decoration: none;
+      color: white;
+      font-family: monospace;
+      font-size: 25px;
+    }
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+    p{
+      margin: 0 0 1rem;
+    }
+
+    h1{
+      margin: 0 0 1rem;
+      font-size: 2.5rem;
+      margin-bottom: .5rem;
+    }
+
+    h2{
+      margin: 0 0 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .text-blue{
+      color: white;
+      font-family: monospace;
+      font-size: 25px;
+    }
+
+    .text-darkblue{
+      color: white;
+      font-family: monospace;
+      font-size: 25px;
+    }
+
+    .text-uppercase{
+      text-transform: uppercase;
+    }
+
+    .icon{
+      margin-right: .5rem;
+    }
+
+    .cv-container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "left-column right-column right-column";
+      width: 1200px;
+      margin: 100px auto;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    .section{
+      margin-bottom: 1.0rem;
+      text-align: center;
+    }
+
+    /* LEFT COLUMN */
+    .left-column{
+      grid-area: left-column;
+      padding: 50px;
+      background-color: transparent;
+      color: white;
+      font-family: monospace;
+      font-size: 25px;
+    }
+
+    .portait{
+      border-radius: 50%;
+      max-width: 150px;
+      margin: auto;
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    .skills{
+      list-style-type: none;
+      padding: 0;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      margin: 0 0 1rem;
+    }
+
+    /* RIGHT COLUMN */
+    .right-column{
+      grid-area: right-column;
+      display: grid;
+      grid-template-rows: 250px 1fr;
+      grid-template-areas:
+        "header"
+        "content";
+    }
+
+    /* HEADER */
+    .header{
+      grid-area: header;
+      padding: 50px;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      font-family: monospace;
+      font-size: 25px;
+    }
+
+    .infos{
+      columns: 2;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* CONTENT */
+    .content{
+      grid-area: content;
+      padding: 50px;
+      color: white;
+      font-family: monospace;
+      font-size: 25px;
+    }
+
+    .experience-list{
+      list-style-type: circle;
+    }
+    .leftlig{
+      text-align: left;
+    }
+
+          nav{
+          display: flex;
+          justify-content: center;
+          font-size: 50px;
+
+
+      }
+      nav a {
+          margin: 0 20px 0 20px;
+
+
+      }
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+        #background-video {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+}
+        .image-zoom {
+        transition: transform 0.3s; /* Time anim */
+}
+
+        .image-zoom:hover {
+        transform: scale(1.1); /* souris effect taille */
+}
+        img2 {
+        height: 100px;
+}
+    .ronde{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+}
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400,800,900);
+
+    </style>
+  <nav>
+
+            <a href="index.html"><img class="ronde image-zoom" src="images/home.jpg" height="100px" alt="aceulle"> </a>
+            <a href="Cv.html"><img class="ronde image-zoom" src="images/icone-cv.jpg" height="100px" alt="Curriculum vitae"></a>
+            <a href="Présentation_perso.html"><img class="ronde image-zoom" src="images/Présentation_personelle.jpg" height="100px" alt="Présentation personelle"></a>
+  </nav>
+
+  <title>Curriculum vitae</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body >
+    <video autoplay loop muted id="background-video">
+        <source src="fond_site_move.mp4" type="video/mp4">
+    </video>
+
+
+    <div class="cv-container">
+      <div class="left-column">
+        <img class="portait" src="images/panne pc.png" />
+        <div class="section">
+          <p>
+             <h2>Olbrechts johan</h2>
+          </p>
+        </div>
+        <div class="section">
+          <h2>Profil</h2>
+          <p>
+            J’ai une expérience et une formation dans l’hôtellerie. J’ai commencé comme restaurateur, puis j’ai effectué une reconversion professionnelle pour devenir technicien automaticien. Actuellement, je poursuis des études en tant que technicien en informatique.
+          </p>
+          <p>
+            De nature débrouillard et indépendant dans mon travail, j’aime apprendre de nouvelles technologies, passer du temps à résoudre des problèmes et réaliser du code de qualité. Mes valeurs de travail : clean code, flexibilité, performance et sérieux.
+          </p>
+        </div>
+        <div class="section">
+          <h2>COMPÉTENCES</h2>
+          <ul class="skills">
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Débutant &#124; Python</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Débutant &#124;HTML5 &#124; CSS3 &#124;</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Débutant &#124;Javascript</strong></li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> Débutant &#124;PHP</li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> Débutant &#124;MySQL</li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> Débutant &#124;Git &#124; Github</li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> Maintenace réseaux</li>
+            <li><i class="icon fas fa-check-circle text-darkblue"></i> Maintenace software</li>
+             <li><i class="icon fas fa-check-circle text-darkblue"></i> Maintenace hardware</li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>Langues</h2>
+          <p>
+            Français, langue maternelle
+            <br>
+            Anglais, compétence professionnelle
+            <br>
+            Néerlandais, compétence professionnelle
+          </p>
+        </div>
+        <div class="section">
+          <h2>Centres d'intérêt</h2>
+          <p>
+            Jeux vidéo, jouer et développer
+            <br>
+            Musique, écoute
+            <br>
+            Art en général
+            <br>
+            Manga Tout type
+            Sport en général le fottball Américain
+            <br>
+            Informatique en général
+          </p>
+        </div>
+      </div>
+      <div class="right-column">
+        <div class="header">
+          <h1>Johan <span class="text-blue text-uppercase">Olbrechts</span></h1>
+          <p>Technicien Informatique</p>
+          <ul class="infos">
+            <li><i class="icon fas fa-at text-blue"></i> <a href="mailto:dragx03@gmail.com">dragx03@gmail.com</a></li>
+            <li><i class="icon fas fa-phone text-blue"></i> 0499374721</li>
+            <li><i class="icon fas fa-map-marker-alt text-blue"></i> Terhulpensesteenweg 482</li>
+            <li><i class="icon fas fa-map-marker-alt text-blue"></i> Belgique, 3090 Overijse</li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="section">
+            <h2>Expériences <br><span class="text-blue">professionelles</span></h2>
+            <h3>Jobs <br><span class="text-blue">Electricien:</span></h3>
+            <p class="leftlig">
+              <strong>Février 2023<i class="fas fa-long-arrow-alt-right"></i>Actuellement:</strong>
+              Technicien FM maintenance,Bpost Bruxelles:<br>
+              Réalisation de la maintenance préventive sur le matériel de bureau et la planification des réparations selon les besoins.
+            </p>
+             <p class="leftlig">
+              <strong>Mars 2017<i class="fas fa-long-arrow-alt-right"></i>fin Avril 2017</strong>
+              Aide éléctricien:<br>
+              Réalisation de la maintenance préventive sur le matériel de bureau et la planification des réparations selon les besoins.
+            </p>
+            <h3>Jobs <br><span class="text-blue">Chauffeur:</span></h3>
+            <p class="leftlig">
+              <strong>Février 2015<i class="fas fa-long-arrow-alt-right"></i>fin Avril 2017</strong>
+              Aide éléctricien,Aide éléctricien:<br>
+              Réalisation de la maintenance préventive sur le matériel de bureau et la planification des réparations selon les besoins.
+            </p>
+            <ul class="experience-list">
+              <li>Réalisations de sites web, d’e-shops,</li>
+              <li>Dépanage hardware et sofware;maintenance réseau </li>
+            </ul>
+            <p>
+              <strong>2023<i class="fas fa-long-arrow-alt-right"></i>Actuellement</strong>
+              Cours du jou technicien informatique
+            </p>
+            <ul class="experience-list">
+              <li>Réalisations de sites web,</li>
+              <li>Dépanage hardware et sofware;maintenance réseau </li>
+            </ul>
+
+          </div>
+          <div class="section">
+            <p>
+              <strong>2021</strong>
+              <br>
+              Freelance en activité
+            </p>
+            <ul class="experience-list">
+
+            </ul>
+          </div>
+          <div class="section">
+            <h2>Études <br><span class="text-blue">& formations</span></h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
